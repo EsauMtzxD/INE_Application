@@ -9,10 +9,15 @@ namespace WebApp.Models
 {
     public class City
     {
-
+        /// <summary>
+        /// Llave primaria de mi tabla City.
+        /// </summary>
         [Key]
         public int Id { get; set; }
 
+        /// <summary>
+        /// Llave foranea de mi tabla StateProvince.
+        /// </summary>
         [ForeignKey("StateProvince")]
         public int StateProvinceId { get; set; }
         public StateProvince StateProvince { get; set; }

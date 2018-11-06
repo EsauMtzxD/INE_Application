@@ -7,14 +7,13 @@ using System.Web;
 
 namespace WebApp.Models
 {
-
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class INEContext : DbContext
     {
 
         public INEContext(): base("INEContext")
         {
-
+            //Vacio.
         }
 
         public DbSet<Address> Addresses { get; set; }
@@ -30,6 +29,7 @@ namespace WebApp.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //De plural -> singular y viceversa.
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
