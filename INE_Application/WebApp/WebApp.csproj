@@ -190,6 +190,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Prototipos\New Mockup 1.png" />
+    <Content Include="Prototipos\New Mockup 2.png" />
+    <Content Include="Prototipos\New Mockup 3.png" />
+    <Content Include="Prototipos\New Mockup 4.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
