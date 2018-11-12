@@ -96,7 +96,7 @@ namespace WebApp.Migrations
                         KeyElector = c.String(nullable: false, maxLength: 40, unicode: false, storeType: "nvarchar"),
                         CURP = c.String(nullable: false, maxLength: 40, unicode: false, storeType: "nvarchar"),
                         Section = c.String(nullable: false, maxLength: 5, unicode: false, storeType: "nvarchar"),
-                        Validity = c.DateTime(nullable: false, precision: 0),
+                        Validity = c.String(nullable: false, unicode: false),
                         Sex = c.String(nullable: false, unicode: false),
                         CIC = c.String(nullable: false, maxLength: 50, unicode: false, storeType: "nvarchar"),
                         Issue = c.String(nullable: false, unicode: false),
