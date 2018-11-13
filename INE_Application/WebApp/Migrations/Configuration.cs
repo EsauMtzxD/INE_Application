@@ -24,7 +24,6 @@ namespace WebApp.Migrations
             List<StateProvince> defaultStatesProvince = new List<StateProvince>();
             List<City> defaultCities = new List<City>();
 
-
             #region Upload data information to DataBase
 
             //<--Migration initial-->

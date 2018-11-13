@@ -74,9 +74,9 @@ namespace WebApp.Models
         /// <summary>
         /// Campo para guardar la fecha de vigencia de la credencial del ciudadano.
         /// </summary>
-        [DataType(DataType.Date)]
         [Required(ErrorMessage = "El campo Validity es obligatorio")]
-        public DateTime Validity { get; set; }
+        [DataType(DataType.Text)]
+        public string Validity { get; set; }
 
         /// <summary>
         /// Campo para guardar el genero del ciudadano.
