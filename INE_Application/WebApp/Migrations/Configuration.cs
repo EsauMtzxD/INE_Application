@@ -25,6 +25,7 @@ namespace WebApp.Migrations
             List<City> defaultCities = new List<City>();
             List<Address> defaultAddress = new List<Address>();
             List<Citizen> defaultCitizen = new List<Citizen>();
+            List<TypeVote> defaultTypeVote = new List<TypeVote>();
 
             #region Upload data information to DataBase
 
@@ -2530,21 +2531,21 @@ namespace WebApp.Migrations
             #endregion
 
             #region Address of the Cityzen
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 993, Street = "SAN JUAN", NumberHouse = "110", Colony = "SAN MARTIN", CodePostale = "65600"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 993, Street = "SAN JUAN", NumberHouse = "110", Colony = "SAN MARTIN", CodePostale = "65600" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 959, Street = "45 SUR", NumberHouse = "1815", Colony = "RUISEÑORES", CodePostale = "65563" });
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "SAN JUDAS TADEO", NumberHouse = "307", Colony = "BALCONES DE ANAHUAC", CodePostale = "66056"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "SAN JUDAS TADEO", NumberHouse = "307", Colony = "BALCONES DE ANAHUAC", CodePostale = "66056" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "JARDINES DEL DESIERTO", NumberHouse = "284", Colony = "JARDINES DE MONTERREY", CodePostale = "66613" });
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "ETZATLAN", NumberHouse = "114", Colony = "NORIA NORTE", CodePostale = "66633"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "ETZATLAN", NumberHouse = "114", Colony = "NORIA NORTE", CodePostale = "66633" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 991, Street = "TERCERA", NumberHouse = "310", Colony = "SATELITE DEL NORTE", CodePostale = "65500" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "JUAN ESCUTIA", NumberHouse = "221", Colony = "NIÑOS HEORES", CodePostale = "66052" });
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "RIOJA", NumberHouse = "216", Colony = "TOPO GRANDE", CodePostale = "66050"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "RIOJA", NumberHouse = "216", Colony = "TOPO GRANDE", CodePostale = "66050" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "CERRO DE LA ESPERANZA", NumberHouse = "406", Colony = "PROVILEON", CodePostale = "66070" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "AVGALAXYA", NumberHouse = "520", Colony = "METROPLEX", CodePostale = "66612" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 993, Street = "SAN ANTONIO", NumberHouse = "404", Colony = "SAN MARTIN", CodePostale = "65600" });
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "PASEO DEL BOSQUE", NumberHouse = "230", Colony = "MONTERREAL", CodePostale = "65056"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "PASEO DEL BOSQUE", NumberHouse = "230", Colony = "MONTERREAL", CodePostale = "65056" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "ANNAPARUMA", NumberHouse = "123", Colony = "SANTA ROSA", CodePostale = "66610" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "AZAFRAM", NumberHouse = "106", Colony = "PRIVADAS DEL SAUCE", CodePostale = "66053" });
-            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 971, Street = "QUINTA DE FRESNOS", NumberHouse = "2925", Colony = "REAL DE PALMAS", CodePostale = "66750"});
+            defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 971, Street = "QUINTA DE FRESNOS", NumberHouse = "2925", Colony = "REAL DE PALMAS", CodePostale = "66750" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 992, Street = "LAGO DE JACO", NumberHouse = "326", Colony = "HAC. LOS ANGELES", CodePostale = "66478" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 953, Street = "N-31", NumberHouse = "164", Colony = "METROPLEX", CodePostale = "66612" });
             defaultAddress.Add(new Address() { CountryRegionId = 1, StateProvinceId = 19, CityId = 968, Street = "CACERES", NumberHouse = "220", Colony = "INFONAVIT TOPO GRANDE", CodePostale = "66050" });
@@ -2555,11 +2556,11 @@ namespace WebApp.Migrations
             #region Citizens
 
             defaultCitizen.Add(new Citizen() { NameCitizen = "IMELDA ABIGAIL", LastName = "GARCIA", MotherLastName = "SEGOVIA", Birthdate = "2000-02-02", AddressId = 1, KeyElector = "GRSGIM00020219M500", CURP = "GASI000202MNLRGMA5", Section = "0811", Validity = "2027", Sex = "MUJER", CIC = "IDMEX1673108426", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
-            defaultCitizen.Add(new Citizen() { NameCitizen = "MARA MARLEM", LastName = "MANDUJANO", MotherLastName = "LOPEZ", Birthdate = "1998-10-15", AddressId = 2, KeyElector = "MNLPMR98101519M000", CURP = "MALM981015MNLNPR05", Section = "0232", Validity = "2027", Sex = "MUJER", CIC = "IDEMEX1570444140", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS"});
+            defaultCitizen.Add(new Citizen() { NameCitizen = "MARA MARLEM", LastName = "MANDUJANO", MotherLastName = "LOPEZ", Birthdate = "1998-10-15", AddressId = 2, KeyElector = "MNLPMR98101519M000", CURP = "MALM981015MNLNPR05", Section = "0232", Validity = "2027", Sex = "MUJER", CIC = "IDEMEX1570444140", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "ISRAEL", LastName = "PEÑA", MotherLastName = "MARTINEZ", Birthdate = "1998-11-26", AddressId = 3, KeyElector = "PEMRIS98112619H500", CURP = "PEMI981126HNLXRS03", Section = "0483", Validity = "2028", Sex = "HOMBRE", CIC = "IDEMEX1758498143", Issue = "2014", RegistrationYear = "2014", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
-            defaultCitizen.Add(new Citizen() { NameCitizen = "CORA JOHANA", LastName = "RAMIREZ", MotherLastName = "SANCHEZ", Birthdate = "2000-05-16", AddressId = 4, KeyElector = "RASACO00160419MEP2", CURP = "RASC000516MNLMNRA4", Section = "0130", Validity = "2026", Sex = "MUJER", CIC = "null", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS"});
-            defaultCitizen.Add(new Citizen() { NameCitizen = "ABBDEEL ESAU", LastName = "MARTINEZ", MotherLastName = "MORENO", Birthdate = "1998-08-26", AddressId = 5, KeyElector = "MRMRAB98082619H000", CURP = "MAMA980826HNLRRB02", Section = "0130", Validity = "2026", Sex = "HOMBRE", CIC = "IDEMEX1512012518", Issue = "2016", RegistrationYear = "2016", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS"});
-            defaultCitizen.Add(new Citizen() { NameCitizen = "FLAVIO CESAR", LastName = "GONZALES", MotherLastName = "RUIZ", Birthdate = "1999-04-28", AddressId = 6, KeyElector = "GNRZFL99042819H700", CURP = "GOFR990428HNLZL00", Section = "1760", Validity = "2027", Sex = "HOMBRE", CIC = "IDEMEX1598716698", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS"});
+            defaultCitizen.Add(new Citizen() { NameCitizen = "CORA JOHANA", LastName = "RAMIREZ", MotherLastName = "SANCHEZ", Birthdate = "2000-05-16", AddressId = 4, KeyElector = "RASACO00160419MEP2", CURP = "RASC000516MNLMNRA4", Section = "0130", Validity = "2026", Sex = "MUJER", CIC = "null", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultCitizen.Add(new Citizen() { NameCitizen = "ABBDEEL ESAU", LastName = "MARTINEZ", MotherLastName = "MORENO", Birthdate = "1998-08-26", AddressId = 5, KeyElector = "MRMRAB98082619H000", CURP = "MAMA980826HNLRRB02", Section = "0130", Validity = "2026", Sex = "HOMBRE", CIC = "IDEMEX1512012518", Issue = "2016", RegistrationYear = "2016", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultCitizen.Add(new Citizen() { NameCitizen = "FLAVIO CESAR", LastName = "GONZALES", MotherLastName = "RUIZ", Birthdate = "1999-04-28", AddressId = 6, KeyElector = "GNRZFL99042819H700", CURP = "GOFR990428HNLZL00", Section = "1760", Validity = "2027", Sex = "HOMBRE", CIC = "IDEMEX1598716698", Issue = "2017", RegistrationYear = "2017", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "SARAHI", LastName = "ERASTO", MotherLastName = "CRUZ", Birthdate = "1997-08-26", AddressId = 7, KeyElector = "ERCRSR97081519M500", CURP = "EACS970815MNLRRR02", Section = "0443", Validity = "2026", Sex = "MUJER", CIC = "IDEMEX1436142924", Issue = "2016", RegistrationYear = "2016", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "RICARDO ALONSO", LastName = "LUGO", MotherLastName = "PEREZ", Birthdate = "1995-05-15", AddressId = 9, KeyElector = "LGPRRC95051519H500", CURP = "LUPR950515HNLGRC07", Section = "0469", Validity = "2023", Sex = "HOMBRE", CIC = "null", Issue = "2013", RegistrationYear = "2013", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "SAMUEL EDUARDO", LastName = "ARRIAGA", MotherLastName = "TREVIÑO", Birthdate = "1995-10-27", AddressId = 10, KeyElector = "ARTRSM95102719H100", CURP = "AITS951027HNLRRM02", Section = "0473", Validity = "2023", Sex = "HOMBRE", CIC = "null", Issue = "2013", RegistrationYear = "2013", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
@@ -2571,13 +2572,22 @@ namespace WebApp.Migrations
             defaultCitizen.Add(new Citizen() { NameCitizen = "MARIO ALBERTO", LastName = "VELAZQUEZ", MotherLastName = "HERNANDEZ", Birthdate = "1999-07-09", AddressId = 15, KeyElector = "VLHRMR99060519H200", CURP = "VEHM9905HNLLRR06", Section = "2656", Validity = "2028", Sex = "HOMBRE", CIC = "IDMEX1772577594", Issue = "2018", RegistrationYear = "2018", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "SAUL ALAN", LastName = "OYERVIDES", MotherLastName = "DIAZ", Birthdate = "1998-07-09", AddressId = 16, KeyElector = "OYDZSL98070919H400", CURP = "OEDS980709HNLYZL06", Section = "1974", Validity = "2027", Sex = "HOMBRE", CIC = "null", Issue = "2017", RegistrationYear = "2016", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "ALEJANDRO", LastName = "ALVARADO", MotherLastName = "ALONSO", Birthdate = "1998-08-30", AddressId = 17, KeyElector = "ALALAL98083019H500", CURP = "AAAA980830HNLLLL07", Section = "2423", Validity = "2023", Sex = "HOMBRE", CIC = "null", Issue = "2016", RegistrationYear = "2016", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
-            defaultCitizen.Add(new Citizen() { NameCitizen = "FRANK KEVIN", LastName = "GOMEZ", MotherLastName = "SALAS", Birthdate = "1999-08-20", AddressId = 18, KeyElector = "FKGSMR98101519M000", CURP = "GOSF990820HNLMLR06", Section = "0469", Validity = "2029", Sex = "HOMBRE", CIC = "null", Issue = "2015", RegistrationYear = "2015", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS"});
+            defaultCitizen.Add(new Citizen() { NameCitizen = "FRANK KEVIN", LastName = "GOMEZ", MotherLastName = "SALAS", Birthdate = "1999-08-20", AddressId = 18, KeyElector = "FKGSMR98101519M000", CURP = "GOSF990820HNLMLR06", Section = "0469", Validity = "2029", Sex = "HOMBRE", CIC = "null", Issue = "2015", RegistrationYear = "2015", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
             defaultCitizen.Add(new Citizen() { NameCitizen = "HORACIO ENRIQUE", LastName = "CASTILLO", MotherLastName = "PUENTE", Birthdate = "1993-04-21", AddressId = 19, KeyElector = "CSPNHR93042119H700", CURP = "CAPH930421HNLSNR01", Section = "2461", Validity = "2028", Sex = "HOMBRE", CIC = "IDMEX1784465214", Issue = "2018", RegistrationYear = "2011", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+
+            #endregion
+
+            #region Type of Vote
+
+            defaultTypeVote.Add(new TypeVote() { NameVote = "NULO", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultTypeVote.Add(new TypeVote() { NameVote = "VALIDO", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultTypeVote.Add(new TypeVote() { NameVote = "CANCELADO", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
 
             #endregion
 
             try
             {
+
                 #region SaveChanges with DbContext
 
                 context.CountryRegions.AddRange(defaultCountriesRegion);
@@ -2595,8 +2605,11 @@ namespace WebApp.Migrations
                 context.Citizens.AddRange(defaultCitizen);
                 context.SaveChanges();
 
+                context.TypeVotes.AddRange(defaultTypeVote);
+                context.SaveChanges();
 
                 #endregion
+
             }
             catch (DbEntityValidationException ex)
             {
@@ -2617,6 +2630,7 @@ namespace WebApp.Migrations
                     sb.ToString(), ex
                 );
             }
+
 
             //  This method will be called after migrating to the latest version.
 

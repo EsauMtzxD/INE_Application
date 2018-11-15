@@ -39,27 +39,24 @@ namespace WebApp.Models
         /// Campo para guardar la fecha en que se creo el registro.
         /// </summary>
         [DataType(DataType.DateTime)]
-        [Required(ErrorMessage = "El Campo CreateDate Es Obligatorio")]
         public DateTime CreateDate { get; set; }
 
         /// <summary>
         /// Campo para guardar el usuario que creo el registro.
         /// </summary>
-        [Required(ErrorMessage = "El campo CreateBy es Obligatorio")]
+        [DataType(DataType.Text)]
         public string CreateBy { get; set; }
 
         /// <summary>
         /// Campo para guardar la ultima fecha en que se modifico el registro.
         /// </summary>
         [DataType(DataType.DateTime)]
-        [Required(ErrorMessage = "El campo ModifiedDate Es Obligatorio")]
         public DateTime ModifiedDate { get; set; }
 
         /// <summary>
         /// Campo para guardar el ultimo usuario que modifico el registro.
         /// </summary>
         [StringLength(30)]
-        [Required(ErrorMessage = "El campo ModifyBy es Obligatorio")]
         public string ModifyBy { get; set; }
 
     }

@@ -3,7 +3,7 @@ namespace WebApp.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial : DbMigration
+    public partial class v3 : DbMigration
     {
         public override void Up()
         {
@@ -194,9 +194,9 @@ namespace WebApp.Migrations
                         IdTypeVote = c.Int(nullable: false),
                         IdCandidate = c.Int(nullable: false),
                         CreateDate = c.DateTime(nullable: false, precision: 0),
-                        CreateBy = c.String(nullable: false, unicode: false),
+                        CreateBy = c.String(unicode: false),
                         ModifiedDate = c.DateTime(nullable: false, precision: 0),
-                        ModifyBy = c.String(nullable: false, maxLength: 30, unicode: false, storeType: "nvarchar"),
+                        ModifyBy = c.String(maxLength: 30, unicode: false, storeType: "nvarchar"),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Candidate", t => t.IdCandidate, cascadeDelete: true)
