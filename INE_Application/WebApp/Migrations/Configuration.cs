@@ -26,6 +26,7 @@ namespace WebApp.Migrations
             List<Address> defaultAddress = new List<Address>();
             List<Citizen> defaultCitizen = new List<Citizen>();
             List<TypeVote> defaultTypeVote = new List<TypeVote>();
+            List<PositionCandidate> defaultPositioCandidate = new List<PositionCandidate>();
 
             #region Upload data information to DataBase
 
@@ -2585,6 +2586,16 @@ namespace WebApp.Migrations
 
             #endregion
 
+            #region Position of Candidate
+
+            defaultPositioCandidate.Add(new PositionCandidate() { NamePositition = "Presidente", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultPositioCandidate.Add(new PositionCandidate() { NamePositition = "Gobernador", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+            defaultPositioCandidate.Add(new PositionCandidate() { NamePositition = "Alcalde", CreateDate = DateTime.Now, CreateBy = "IAGS", ModifiedDate = DateTime.Now, ModifyBy = "IAGS" });
+
+            #endregion
+
+
+
             try
             {
 
@@ -2606,6 +2617,9 @@ namespace WebApp.Migrations
                 context.SaveChanges();
 
                 context.TypeVotes.AddRange(defaultTypeVote);
+                context.SaveChanges();
+
+                context.PositionCandidates.AddRange(defaultPositioCandidate);
                 context.SaveChanges();
 
                 #endregion
