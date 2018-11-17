@@ -1,14 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width" />
-    <title>Error</title>
-</head>
-<body>
-    <hgroup>
-        <h1>Error.</h1>
-        <h2>Error al procesar la solicitud.</h2>
-    </hgroup>
-</body>
-</html>
+﻿@using WebApp.Models
+@model HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h2> Error </h2>
+
+@if (Model.Exception is Excepcion)
+{
+    <h3> @Model.Exception.Message</h3>
+}
+else
+{
+    <h3> This Crashed =C</h3>
+}
+<br>
+<br>
+<input type="submit" value="Back to Index" onclick="location.href='@Url.Action("Index", "Home/Index")'" class="btn btn-default" />
