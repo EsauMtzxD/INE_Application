@@ -10,6 +10,7 @@ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
+        [HandleError(View = "Error")]
         public ActionResult Index()
         {
             try
