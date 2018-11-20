@@ -5,7 +5,7 @@
  */
 
 body {
-  padding-top: 54px;
+  padding-top: 0px;
 }
 
 @media (min-width: 992px) {
@@ -17,7 +17,7 @@ body {
 .business-header {
   height: 50vh;
   min-height: 100px;
-  background: url('https://i.imgur.com/DydICVa.png') center center no-repeat scroll;
+  background: url('https://i.imgur.com/rSZBsu2.png') center center no-repeat scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -27,15 +27,211 @@ body {
 .card {
   height: 100%;
 }
+          /*ESTILO DEL FORM*/
+/* Add styles to the form container */
+.container1 {
+    
+    padding-left: 90px;
+    margin: 20px;
+    max-width: 320px;
+    padding: 16px;
+    background-color: white;
+    font-size: 18px;
+    text-align: center;
+    border-color: white;
+}
 
-p {
+/* Full-width input fields */
+input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: 1px;
+    border-color: #C71585;
+    background: #f1f1f1;
+}
 
-padding-left: 20px;
-padding-right: px;
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #C71585;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.m {
+
+text-align: center;
+color: white;
 
 }
 
-h2 {
-    padding-left: 20px;
-    padding-right: px;
+.con {
+
+    background-color: #C71585;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    opacity: 0.9;
 }
+
+.con:hover{
+
+    opacity:  1;
+}
+
+ /* TABS */
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+
+}
+
+.tablinks{
+  font-weight: bold;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #C71585;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+/* 
+DISEÑO DE LA TABLA DE SELECCION DE CANDIDATOS
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .responsive-table-input-matrix {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+            font-size: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        tbody {
+            display: block;
+            overflow-x: auto;
+            position: relative;
+            white-space: nowrap;
+            width: auto;
+
+
+            tr {
+                display: inline-block;
+                vertical-align: top;
+
+                td {
+                    display: block;
+                    text-align: center;
+
+                    &:first-child {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        thead {
+            display: block;
+            float: left;
+            margin-right: 10px;
+
+            &:after {
+                clear: both;
+                content: "";
+                display: block;
+                font-size: 0;
+                height: 0;
+                visibility: hidden;
+            }
+
+            th:first-of-type {
+                height: 1.4em;
+            }
+
+            th {
+                display: block;
+                text-align: right;
+
+                &:first-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
